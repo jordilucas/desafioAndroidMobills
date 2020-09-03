@@ -10,6 +10,8 @@ buildscript {
         constraintlayout="2.0.1"
         junit="4.12"
         material_design="1.2.0"
+        play_services_auth="18.1.0"
+        firebase_auth="19.3.2"
     }
     //ext.kotlin_version = "1.4.0"
     repositories {
