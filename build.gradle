@@ -9,6 +9,7 @@ buildscript {
         appcompat="1.2.0"
         constraintlayout="2.0.1"
         junit="4.12"
+        material_design="1.2.0"
     }
     //ext.kotlin_version = "1.4.0"
     repositories {

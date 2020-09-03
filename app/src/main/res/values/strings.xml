@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Desafio Android Mobills</string>
+    <string name="btnLogin">Login com google</string>
+    <string name="lbl_logo">Bem vindo ao \nGerenciador Financeiro</string>
+    <string name="txt_dev">Desenvolvido por: Jordi Lucas</string>
 </resources>
