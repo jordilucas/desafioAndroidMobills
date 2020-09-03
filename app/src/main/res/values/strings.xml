@@ -3,4 +3,5 @@
     <string name="btnLogin">Login com google</string>
     <string name="lbl_logo">Bem vindo ao \nGerenciador Financeiro</string>
     <string name="txt_dev">Desenvolvido por: Jordi Lucas</string>
+    <string name="error_google_signin">Erro ao fazer login</string>
 </resources>
