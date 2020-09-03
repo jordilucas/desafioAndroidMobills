@@ -36,6 +36,7 @@ dependencies {
     implementation "com.google.android.material:material:$material_design"
     implementation "com.google.android.gms:play-services-auth:$play_services_auth"
     implementation "com.google.firebase:firebase-auth:$firebase_auth"
+    implementation "com.google.firebase:firebase-firestore:$firebase_firestore"
     testImplementation "junit:junit:$junit"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
