@@ -10,7 +10,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.signin_activity.*
 
 class SigninActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class SigninActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.signin_activity)
         initGoogleSignin()
         btnSignin.setOnClickListener { signIn() }
     }
@@ -65,8 +65,7 @@ class SigninActivity : AppCompatActivity() {
         fbAuth.signInWithCredential(credencial)
             .addOnCompleteListener(this) { task ->
                 if(task.isSuccessful){
-                    finish()
-                    //startActivity(Intent(this, actitivy::class.java))
+                    startActivity(Intent(this, BaseActivity::class.java))
                 }
                 else{
                     showErrorMessage()
