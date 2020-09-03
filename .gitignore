@@ -12,6 +12,7 @@
 /captures
 .externalNativeBuild
 .cxx
+google-services.json
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,intellij+all
