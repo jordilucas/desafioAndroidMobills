@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 class BottomNavActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener  {
     override fun init() {
-        TODO("Not yet implemented")
+
     }
 
 
