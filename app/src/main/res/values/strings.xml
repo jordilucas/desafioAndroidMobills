@@ -8,4 +8,8 @@
     <string name="home">Home</string>
     <string name="despesa">Despesa</string>
     <string name="minha_conta">Minha conta</string>
+    <string name="hint_descricao">Descricao da despesa</string>
+    <string name="hint_valor">Valor da despesa</string>
+    <string name="hint_date">Data da receita</string>
+    <string name="btn_salvar">Salvar</string>
 </resources>

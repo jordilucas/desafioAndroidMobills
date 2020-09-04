@@ -6,4 +6,5 @@
     <dimen name="lbl_logo_size">32sp</dimen>
     <dimen name="lbl_dev_size">12sp</dimen>
     <dimen name="bottom_height">56dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
 </resources>
