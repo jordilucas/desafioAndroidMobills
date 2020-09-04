@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 
-open class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
 
     protected val fbAuth:FirebaseAuth = FirebaseAuth.getInstance()
     private var hasInitCalled = false
@@ -37,6 +37,6 @@ open class BaseActivity : AppCompatActivity() {
         fbAuth.removeAuthStateListener(authListener)
     }
 
-    protected fun init(){}
+    protected abstract fun init()
 
 }
