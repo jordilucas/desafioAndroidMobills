@@ -12,4 +12,6 @@
     <string name="hint_valor">Valor da despesa</string>
     <string name="hint_date">Data da receita</string>
     <string name="btn_salvar">Salvar</string>
+    <string name="receita_salvo">Receita salva com sucesso</string>
+    <string name="receita_error">Erro ao cadastrar receita</string>
 </resources>
