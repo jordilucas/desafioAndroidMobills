@@ -7,7 +7,9 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
-
+    buildFeatures{
+        dataBinding = true
+    }
     defaultConfig {
         applicationId "br.com.jordilucas.desafioandroidmobills"
         minSdkVersion 24
@@ -45,6 +47,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
     implementation "org.parceler:parceler-api:$parceler_version"
     kapt "org.parceler:parceler:$parceler_version"
+    kapt "com.android.databinding:compiler:$gradle_version"
     testImplementation "junit:junit:$junit"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
