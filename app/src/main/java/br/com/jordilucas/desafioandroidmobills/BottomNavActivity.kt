@@ -1,20 +1,18 @@
 package br.com.jordilucas.desafioandroidmobills
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_base.*
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
-class BaseActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener  {
+class BottomNavActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener  {
 
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_base)
+        setContentView(R.layout.activity_bottom_navigation)
         bottomNav.setOnNavigationItemSelectedListener(this)
         newFragment(HomeFragment())
     }
