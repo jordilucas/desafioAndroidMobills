@@ -65,7 +65,7 @@ class SigninActivity : AppCompatActivity() {
         fbAuth.signInWithCredential(credencial)
             .addOnCompleteListener(this) { task ->
                 if(task.isSuccessful){
-                    startActivity(Intent(this, BaseActivity::class.java))
+                    startActivity(Intent(this, BottomNavActivity::class.java))
                 }
                 else{
                     showErrorMessage()

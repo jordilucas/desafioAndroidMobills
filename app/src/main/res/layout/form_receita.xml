@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="java.util.List"/>
+        <variable
+            name="receita"
+            type="br.com.jordilucas.desafioandroidmobills.model.Receita"
+            />
+        <variable
+            name="view"
+            type="br.com.jordilucas.desafioandroidmobills.ReceitaFormActivity"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_default"
+        android:background="@android:color/white">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.DesafioAndroidMobills.TextInputLayout"
+            android:hint="@string/hint_descricao">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="@={receita.descricao}"
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtValor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.DesafioAndroidMobills.TextInputLayout"
+            android:hint="@string/hint_valor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:text="@={receita.valor}"
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.DesafioAndroidMobills.TextInputLayout"
+            android:hint="@string/hint_date">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:text="@={receita.data}"
+                android:imeOptions="actionNext"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/ckb_recebido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recebido?"
+            android:checked="@={receita.recebido}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="Widget.DesafioAndroidMobills.Button"
+            android:text="@string/btn_salvar"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</layout>
