@@ -7,7 +7,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 class BottomNavActivity : BaseActivity(), BottomNavigationView.OnNavigationItemSelectedListener  {
-
+    override fun init() {
+        TODO("Not yet implemented")
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +28,7 @@ class BottomNavActivity : BaseActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
             R.id.receita_nav ->{
-                newFragment(ReceitaFragment())
+                newFragment(ReceitaListFragment())
                 return true
             }
             R.id.despesa_nav ->{
