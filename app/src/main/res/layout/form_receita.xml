@@ -31,8 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:text="@={receita.descricao}"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:text="@={receita.descricao}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,9 +46,9 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:text="@={receita.valor}"
-                android:imeOptions="actionNext"/>
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:text="@={receita.valorReceita}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,8 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="date"
-                android:text="@={receita.data}"
-                android:imeOptions="actionNext"/>
+                android:imeOptions="actionNext"
+                android:text="@={receita.dataReceita}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
