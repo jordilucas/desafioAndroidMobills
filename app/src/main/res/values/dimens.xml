@@ -7,4 +7,6 @@
     <dimen name="lbl_dev_size">12sp</dimen>
     <dimen name="bottom_height">56dp</dimen>
     <dimen name="padding_default">16dp</dimen>
+    <dimen name="padding_item_list">8dp</dimen>
+    <dimen name="txt_size">16sp</dimen>
 </resources>

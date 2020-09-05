@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="receita"
+            type="br.com.jordilucas.desafioandroidmobills.model.Receita" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:padding="@dimen/padding_item_list">
+
+        <ImageView
+            android:id="@+id/imgRecibo"
+            android:layout_width="90dp"
+            android:layout_height="120dp"
+            android:scaleType="centerInside"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDescricao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@{receita.descricao}"
+            android:textSize="@dimen/txt_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgRecibo"
+            app:layout_constraintTop_toTopOf="@id/imgRecibo"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtDataReceita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgRecibo"
+            app:layout_constraintTop_toBottomOf="@id/txtDescricao"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtValor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgRecibo"
+            app:layout_constraintTop_toBottomOf="@id/txtDataReceita"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

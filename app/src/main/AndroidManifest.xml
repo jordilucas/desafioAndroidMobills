@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DesafioAndroidMobills">
-        <activity android:name=".BaseActivity"></activity>
+        <activity android:name=".DetailsActivity"></activity>
+        <activity android:name=".BaseActivity" />
         <activity android:name=".ReceitaFormActivity" />
         <activity android:name=".BottomNavActivity" />
         <activity android:name=".SigninActivity">

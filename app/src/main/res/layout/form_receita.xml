@@ -11,6 +11,9 @@
         <variable
             name="view"
             type="br.com.jordilucas.desafioandroidmobills.ReceitaFormActivity"/>
+        <variable
+            name="viewModel"
+            type="br.com.jordilucas.desafioandroidmobills.viewModel.ReceitaFormViewModel" />
     </data>
 
     <LinearLayout
@@ -64,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="date"
                 android:imeOptions="actionNext"
-                android:text="@={receita.dataReceita}"/>
+                android:onClick="@{view::setDate}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
