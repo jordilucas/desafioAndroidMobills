@@ -1,8 +1,5 @@
 package br.com.jordilucas.desafioandroidmobills.viewModel
 
-import android.util.Log
-import android.widget.CompoundButton
-import androidx.databinding.Bindable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
