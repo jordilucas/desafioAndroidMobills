@@ -1,5 +1,6 @@
 package br.com.jordilucas.desafioandroidmobills
 
+import android.app.DatePickerDialog
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -17,9 +18,10 @@ import kotlinx.android.synthetic.main.form_receita.*
 import org.parceler.Parcels
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.xml.datatype.DatatypeConstants.MONTHS
 
 class ReceitaFormActivity : BaseActivity() {
-
+    var cal=""
     private val viewModel: ReceitaFormViewModel by lazy{
         ViewModelProvider(this).get(ReceitaFormViewModel::class.java)
     }
@@ -48,6 +50,29 @@ class ReceitaFormActivity : BaseActivity() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        var cal = Calendar.getInstance()
+
+        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            val myFormat = "dd/MM/yyyy"
+            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            binding.content.edtDate.editText?.setText(sdf.format(cal.time))
+
+        }
+
+        edtDate.editText?.setOnClickListener {
+            DatePickerDialog(this, dateSetListener,
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+    }
     override fun init() {
         viewModel.showProgress().observe(this, Observer { loading ->
             loading?.let {
@@ -87,13 +112,23 @@ class ReceitaFormActivity : BaseActivity() {
         }
     }
 
-    fun setDate(view: View){
-        var calendar = Calendar.getInstance().time
-        val formatter = SimpleDateFormat.getDateTimeInstance()
-        val formatterDate = formatter.format(calendar)
-        val teste = calendar.time.toString()
-        edtDate.editText?.setText(teste)// = teste //binding.content.edtDate.editText?.setText(teste)
-    }
+    fun setDate(){
+        val cal = Calendar.getInstance()
+
+        val dpd = DatePickerDialog.OnDateSetListener{ view, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            val myFormat = "dd/MM/yyyy" // mention the format you need
+            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            binding.content.edtDate.editText!!.setText(sdf.format(cal.time).toString())
+        }
+
+        DatePickerDialog(this@ReceitaFormActivity, dpd,
+            cal.get(Calendar.YEAR),
+            cal.get(Calendar.MONTH),
+            cal.get(Calendar.DAY_OF_MONTH)).show()
+      }
 
     companion object{
         const val RECEITA ="receita"
